@@ -10,9 +10,9 @@ import math as mt
 import itertools as iter
 
 def main():
-	symbols = ['C', 'GS', 'IBM', 'HNZ']
-	startdate=dt.datetime(2010, 1, 1)
-	enddate=dt.datetime(2010, 12, 31)
+	symbols = ['C', 'GS', 'IBM', 'HNZ']	#Change this to reflect the securities you want analysis done against
+	startdate=dt.datetime(2010, 1, 1)       #Start time of the analysis
+	enddate=dt.datetime(2010, 12, 31)	#End time of the analysis
 	alloc = np.full((1, len(symbols)), 0.0)
 	
 	for val in iter.product(np.arange(0, 1.01, 0.1), repeat=len(symbols)):    #This will create the allocationcombinations you need. Change the the interval in arange to make it more granular
